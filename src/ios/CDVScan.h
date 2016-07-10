@@ -17,10 +17,11 @@
  under the License.
  */
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 #import <Cordova/CDVPlugin.h>
 
 @interface CDVScan : CDVPlugin
 {}
+- (void)recognize:(CDVInvokedUrlCommand*)command;
 
 @end

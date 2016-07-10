@@ -17,16 +17,16 @@
  under the License.
  */
 
-#include <sys/types.h>
-#include <sys/sysctl.h>
-#include "TargetConditionals.h"
 
-#import <Cordova/CDV.h>
+#import <Cordova/CDVViewController.h>
 #import "CDVScan.h"
 
 @interface CDVScan () {}
 @end
 
 @implementation CDVScan
-
+- (void)recognize:(CDVInvokedUrlCommand*)command
+{
+    NSLog(@"wefwef");
+}
 @end
