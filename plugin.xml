@@ -48,8 +48,8 @@
     <!-- ios -->
     <platform name="ios">
         <config-file target="config.xml" parent="/*">
-            <feature name="Scan">
-                <param name="ios-package" value="CDScan"/>
+            <feature name="scan">
+                <param name="ios-package" value="CDVScan"/>
             </feature>
         </config-file>
         
