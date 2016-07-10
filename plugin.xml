@@ -53,6 +53,16 @@
             </feature>
         </config-file>
         
+        <config-file target="*-Info.plist">
+          <Boolean>
+             <key>View controller-based status bar appearance</key>
+             <Boolean>NO</Boolean>
+          </Boolean>
+          <String>
+             <key>Status bar style</key>
+             <String>UIStatusBarStyleLightContent</String>
+          </String>
+        </config-file>
         
         <header-file src="src/ios/CDVScan.h" />
         <source-file src="src/ios/CDVScan.m" />

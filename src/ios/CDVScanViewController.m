@@ -19,6 +19,7 @@
 {
     [super viewDidLoad];
     self.title = @"識別二維碼";
+    self.navigationItem.leftBarButtonItem=[[UIBarButtonItem alloc] initWithTitle:@"關閉" style:UIBarButtonItemStylePlain target:self action:@selector(handleClose:)];
 
     // Do any additional setup after loading the view, typically from a nib.
     //获取摄像设备
@@ -47,6 +48,10 @@
     [self.scanSession startRunning];
 }
 
+-(void)handleClose:(id)sender{
+    [self.navigationController dismissViewControllerAnimated:YES completion:NULL];
+}
+
 - (void)viewDidLayoutSubviews
 {
     [super viewDidLayoutSubviews];
@@ -73,8 +78,16 @@
         //[session stopRunning];
         AVMetadataMachineReadableCodeObject* metadataObject = [metadataObjects objectAtIndex:0];
         //输出扫描字符串
-        NSLog(metadataObject.stringValue);
+        NSString *str = metadataObject.stringValue;
+        NSLog(@"%@",str);
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"scan" object:self userInfo:@{@"content":str}];
+                [self handleClose:NULL];
+        });
+        
+        
     }
 }
+
 @end
 
