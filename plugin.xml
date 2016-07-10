@@ -58,11 +58,7 @@
         <source-file src="src/ios/CDVScan.m" />
         <header-file src="src/ios/CDVScanViewController.h" />
         <source-file src="src/ios/CDVScanViewController.m" />
-        
-        <framework src="AddressBook.framework" />
-        
-        
-        
+      
     </platform>
 
 </plugin>

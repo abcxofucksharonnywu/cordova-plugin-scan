@@ -22,11 +22,11 @@
 #include "TargetConditionals.h"
 
 #import <Cordova/CDV.h>
-#import "CDVFirebase.h"
+#import "CDVScan.h"
 
-@interface CDVFirebase () {}
+@interface CDVScan () {}
 @end
 
-@implementation CDVFirebase
+@implementation CDVScan
 
 @end
