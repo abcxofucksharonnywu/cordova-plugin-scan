@@ -8,6 +8,7 @@
 //
 
 #import "CDVScanViewController.h"
+#import <AVFoundation/AVFoundation.h>
 @interface CDVScanViewController () <AVCaptureMetadataOutputObjectsDelegate> //用于处理采集信息的代理
 @property (strong, nonatomic) AVCaptureSession* scanSession; //输入输出的中间桥梁
 @property (strong, nonatomic) AVCaptureVideoPreviewLayer* scanLayer; //输入输出的中间桥梁
